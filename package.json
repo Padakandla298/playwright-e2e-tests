@@ -9,7 +9,11 @@
     "demo2": "npx playwright test tests/demo/basic2.spec.ts --headed",
     "demo3": "npx playwright test tests/demo/basic3.spec.ts --headed",
     "Login": "npx playwright test tests/functional/Login.spec.ts --headed",
-    "inventory": "npx playwright test tests/demo/inventory.spec.ts --headed"
+    "inventory": "npx playwright test tests/demo/inventory.spec.ts --headed",
+    "dropdown": "npx playwright test tests/functional/Dropdown.spec.ts --headed",
+    "dropdown:debug": "npx playwright test tests/demo/DropdownDemo.spec.ts --ui --headed",
+    "login": "npx playwright test tests/functional/Login2.spec.ts --ui --headed"
+
 
 
   },

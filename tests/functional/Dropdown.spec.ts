@@ -33,10 +33,24 @@ test.describe("Login tests", () => {
     let dropdowncount = page.getByLabel("Facility").locator("option");
     await expect(dropdowncount).toHaveCount(3);
     let listofelementindropdown = await page.getByLabel("Facility").all();
+    for(let ele of listofelementindropdown){
+      const opt=await ele.locator("option").allTextContents();
+      if(opt.includes("Seoul CURA Healthcare Center")){
+    
+       await ele.selectOption({label:"Seoul CURA Healthcare Center"});
+        break;
+
+
+      }
+   
+    };
+
+    
     let array=[];
     for(let ele of listofelementindropdown){
        let element=await ele.textContent();
-        if(element){
+        if(element.includes("hello world")){
+           await ele.selectOption(element);
           array.push(element)
         }
     }
