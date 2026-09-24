@@ -1,0 +1,61 @@
+import { test, expect } from "@playwright/test";
+
+test.describe("Login tests", () => {
+  test.beforeEach("common steps", async ({ page }) => {
+    await page.goto("https://katalon-demo-cura.herokuapp.com/");
+
+    await page.getByRole("link", { name: "Make Appointment" }).click();
+  });
+
+  test("valid login", async ({ page }) => {
+    await page
+      .getByLabel("Username")
+      .pressSequentially("venkatesh", { delay: 300 });
+    await page.getByLabel("Username").clear();
+    await page.getByLabel("Username").fill("John Doe");
+
+    await page.getByLabel("Password").fill("ThisIsNotAPassword");
+
+    await page.getByRole("button", { name: "Login" }).click();
+
+    await expect(page.locator("h2")).toContainText("Make Appointment");
+
+    await expect(page.getByLabel("Facility")).toHaveValue(
+      "Tokyo CURA Healthcare Center"
+);
+    await page
+      .getByLabel("Facility")
+      .selectOption("Hongkong CURA Healthcare Center");
+    await page
+      .getByLabel("Facility")
+      .selectOption({ label: "Seoul CURA Healthcare Center" });
+    await page.getByLabel("Facility").selectOption({ index: 0 });
+    let dropdowncount = page.getByLabel("Facility").locator("option");
+    await expect(dropdowncount).toHaveCount(3);
+    let listofelementindropdown = await page.getByLabel("Facility").all();
+    let array=[];
+    for(let ele of listofelementindropdown){
+       let element=await ele.textContent();
+        if(element){
+          array.push(element)
+        }
+    }
+    console.log(`list of elements are : ${array}`);
+// chekboxes
+  await  page.getByRole('checkbox', { name: 'Apply for hospital readmission' }).check();
+   await page.getByRole('checkbox', { name: 'Apply for hospital readmission' }).uncheck();
+   await  page.getByRole('checkbox', { name: 'Apply for hospital readmission' }).check();
+   await expect( page.getByRole('checkbox', { name: 'Apply for hospital readmission' })).toBeChecked
+   await expect(page.getByRole('radio', { name: 'Medicare' })).toBeChecked();
+
+    await page.getByRole('radio', { name: 'Medicaid' }).check();
+    expect(page.getByRole('radio', { name: 'Medicare' })).not.toBeChecked();
+    
+  });
+});
+
+/*test.only("Demo on locators",async({page})=>{
+  await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+  await page.locator("//input[@value='radio1']").click();
+  await page.getByPlaceholder("Type to Select Countries").fill("INDIA");
+}) */

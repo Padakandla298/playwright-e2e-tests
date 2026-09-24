@@ -11,6 +11,8 @@ test.describe("Login tests", () => {
 
   test('valid login', async ({ page }) => {
 
+    await page.getByLabel('Username').pressSequentially('venkatesh',{delay:300});
+    await page.getByLabel('Username').clear();
     await page.getByLabel('Username').fill('John Doe');
 
     await page.getByLabel('Password').fill('ThisIsNotAPassword');

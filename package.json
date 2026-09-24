@@ -5,7 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright, playwright-E2E-tests,playwright-with-MCP",
-    "demo": "npx playwright test tests/demo/basic.spec.ts --headed"
+    "demo": "npx playwright test tests/demo/basic.spec.ts --headed",
+    "demo2": "npx playwright test tests/demo/basic2.spec.ts --headed",
+    "demo3": "npx playwright test tests/demo/basic3.spec.ts --headed",
+    "Login": "npx playwright test tests/functional/Login.spec.ts --headed",
+    "inventory": "npx playwright test tests/demo/inventory.spec.ts --headed"
+
+
   },
   "keywords": [
     "playwright",
