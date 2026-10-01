@@ -12,6 +12,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  globalTimeout:10_000,
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -22,7 +23,16 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  expect:{timeout:10_000},
+  reporter: [['html',{open:'never'}],['allure-playwright',{
+    detail: true,
+      suiteTitle: true,
+      environmentInfo: {
+        name: 'TEST',
+        Release: 'Release 1.1',
+      },
+        
+  },],],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
@@ -32,14 +42,24 @@ export default defineConfig({
     trace: 'on-first-retry',
     ignoreHTTPSErrors:true,
     navigationTimeout: 30_000,
+    screenshot : 'only-on-failure',
+    video : 'retain-on-failure',
+    actionTimeout:10_000,
+    
+   
   },
 
   /* Configure projects for major browsers */
-  projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+ projects: [
+  {
+    name: 'chromium',
+    use: {
+      viewport: null,
+      launchOptions: {
+        args: ['--start-maximized'],
+      },
     },
+  },
 
     
     /* Test against mobile viewports. */

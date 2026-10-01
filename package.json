@@ -12,8 +12,9 @@
     "inventory": "npx playwright test tests/demo/inventory.spec.ts --headed",
     "dropdown": "npx playwright test tests/functional/Dropdown.spec.ts --headed",
     "dropdown:debug": "npx playwright test tests/demo/DropdownDemo.spec.ts --ui --headed",
-    "login": "npx playwright test tests/functional/Login2.spec.ts --ui --headed"
-
+    "login": "npx playwright test tests/functional/Login2.spec.ts --ui --headed",
+    "E2E": "npx playwright test tests/functional/e2e_flow.spec.ts --headed",
+   "Debug": "cross-env DEBUG=pw:api npx playwright test tests/functional/e2e_flow.spec.ts --headed"
 
 
   },
@@ -26,6 +27,7 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.63.0",
-    "@types/node": "^26.5.1"
+    "@types/node": "^26.5.1",
+    "allure-playwright": "^3.12.2"
   }
 }

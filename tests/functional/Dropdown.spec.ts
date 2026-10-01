@@ -7,7 +7,7 @@ test.describe("Login tests", () => {
     await page.getByRole("link", { name: "Make Appointment" }).click();
   });
 
-  test("valid login", async ({ page }) => {
+  test("valid login",{annotation:{type:"defect",description:"QAenv"},tag:"@smoke"},async ({ page },testinfo) => {
     await page
       .getByLabel("Username")
       .pressSequentially("venkatesh", { delay: 300 });
@@ -23,6 +23,12 @@ test.describe("Login tests", () => {
     await expect(page.getByLabel("Facility")).toHaveValue(
       "Tokyo CURA Healthcare Center"
 );
+    let src=await page.screenshot({fullPage:true});
+    testinfo.attach("Appointmentpage",{
+      body:src,
+      contentType : "image/png"
+    });
+
     await page
       .getByLabel("Facility")
       .selectOption("Hongkong CURA Healthcare Center");
@@ -48,7 +54,7 @@ test.describe("Login tests", () => {
     
     let array=[];
     for(let ele of listofelementindropdown){
-       let element=await ele.textContent();
+       let element=await ele.allTextContents();
         if(element.includes("hello world")){
            await ele.selectOption(element);
           array.push(element)
