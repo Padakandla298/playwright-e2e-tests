@@ -4,18 +4,18 @@ import { defineConfig, devices } from '@playwright/test';
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// import dotenv from 'dotenv';
-// import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
+ import dotenv from 'dotenv';
+import path from 'path';
+ dotenv.config({ path: path.resolve(process.cwd(), "./tests-examples/.env") });
 
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
-export default defineConfig({
-  globalTimeout:10_000,
+export const baseConfig= defineConfig({
+  //globalTimeout:10_000,
   testDir: './tests',
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -24,8 +24,11 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   expect:{timeout:10_000},
+  globalSetup: require.resolve("./tests/helpers/global-setup.ts"),
+  globalTeardown: require.resolve("./tests/helpers/global-teardown.ts"),
   reporter: [['html',{open:'never'}],['allure-playwright',{
     detail: true,
+    resultsDir: 'allure-results',
       suiteTitle: true,
       environmentInfo: {
         name: 'TEST',
@@ -41,10 +44,10 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     ignoreHTTPSErrors:true,
-    navigationTimeout: 30_000,
+    //navigationTimeout: 30_000,
     screenshot : 'only-on-failure',
     video : 'retain-on-failure',
-    actionTimeout:10_000,
+    //actionTimeout:10_000,
     
    
   },
@@ -62,11 +65,11 @@ export default defineConfig({
   },
 
     
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
+   // Test against mobile viewports. */
+    /* {
+      name: 'iPhone 14',
+       use: { ...devices['iPhone 14'] },
+     },
     // {
     //   name: 'Mobile Safari',
     //   use: { ...devices['iPhone 12'] },

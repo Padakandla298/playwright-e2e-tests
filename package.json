@@ -6,17 +6,19 @@
   "scripts": {
     "test": "playwright, playwright-E2E-tests,playwright-with-MCP",
     "demo": "npx playwright test tests/demo/basic.spec.ts --headed",
+    "Globaldata": "npx playwright test tests/demo/basic.spec.ts --headed",
+    "test:Globaldata": "npx playwright test --config=config/test.playwright.config.ts tests/demo/basic.spec.ts --headed",
+    "E2E:Practice": "npx playwright test --config=config/test.playwright.config2.ts tests/functional/E2E2.spec.ts --headed",
     "demo2": "npx playwright test tests/demo/basic2.spec.ts --headed",
     "demo3": "npx playwright test tests/demo/basic3.spec.ts --headed",
     "Login": "npx playwright test tests/functional/Login.spec.ts --headed",
     "inventory": "npx playwright test tests/demo/inventory.spec.ts --headed",
     "dropdown": "npx playwright test tests/functional/Dropdown.spec.ts --headed",
-    "dropdown:debug": "npx playwright test tests/demo/DropdownDemo.spec.ts --ui --headed",
+    "dropdown:debug": "npx playwright test tests/demo/DropdownDemo.spec.ts --headed",
     "login": "npx playwright test tests/functional/Login2.spec.ts --ui --headed",
     "E2E": "npx playwright test tests/functional/e2e_flow.spec.ts --headed",
-   "Debug": "cross-env DEBUG=pw:api npx playwright test tests/functional/e2e_flow.spec.ts --headed"
-
-
+    "check": "npx playwright test --config=config/test.playwright.config.ts tests/demo/checkconfig.spec.ts --headed",
+    "Debug": "cross-env DEBUG=pw:api npx playwright test tests/functional/e2e_flow.spec.ts --headed"
   },
   "keywords": [
     "playwright",
@@ -27,7 +29,10 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.63.0",
-    "@types/node": "^26.5.1",
-    "allure-playwright": "^3.12.2"
+    "@types/node": "^26.6.3",
+    "allure-playwright": "^3.12.2",
+    "chalk": "^4.1.2",
+    "csv-parse": "^7.0.3",
+    "dotenv": "^18.0.5"
   }
 }

@@ -15,7 +15,7 @@ test.describe("login tests", () => {
     await page.getByRole("link", { name: "Make Appointment" }).dblclick({timeout:10_000});
     
   });
-  test("Login with valid credentials", async ({ page }) => {
+  test("Login with valid credentials", {tag:"@smoke"},async ({ page }) => {
     await page.getByLabel("Password").dblclick();
     await page.getByLabel("Password").fill("ThisIsNotAPassword");
 
@@ -35,7 +35,7 @@ test.describe("login tests", () => {
     await page.getByRole("button", { name: "Book Appointment" }).click();
     await expect(page.getByText("Please be informed that your")).toBeVisible();
   });
-  test("Login with valid invalid credentials", async ({ page }) => {
+  test("Login with valid invalid credentials",{tag:"@smoke"}, async ({ page }) => {
     await page.getByLabel("Password").dblclick();
     await page.getByLabel("Password").fill("ThisIsNotAPassword");
 
