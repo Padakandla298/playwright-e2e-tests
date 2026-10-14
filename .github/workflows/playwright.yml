@@ -30,3 +30,11 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+      - name: Upload Allure results
+        uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: allure-results
+          path: allure-results/
+          if-no-files-found: warn
+          retention-days: 30
