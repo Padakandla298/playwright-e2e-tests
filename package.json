@@ -10,7 +10,7 @@
     "test:Globaldata": "npx playwright test --config=config/test.playwright.config.ts tests/demo/basic.spec.ts --headed",
     "E2E:Practice": "npx playwright test --config=config/test.playwright.config2.ts tests/functional/E2E2.spec.ts --headed",
     "API:GET": "npx playwright test --config=config/test.playwright.config2.ts tests/api/Demo_get.spec.ts",
-    "E2E:POM": "npx playwright test --config=config/test.playwright.config2.ts tests/e2e/complerE2e.spec.ts --headed",
+    "E2E:POM": "npx playwright test --config=config/test.playwright.config2.ts tests/e2e/complerE2e.spec.ts",
     "User:Data2": "npx playwright test --config=config/test.playwright.config2.ts tests/e2e/UserDataE2E.spec.ts ",
     "demo2": "npx playwright test tests/demo/basic2.spec.ts --headed",
     "demo5": "npx playwright test tests/demo/Demo5.spec.ts --headed",
