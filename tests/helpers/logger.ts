@@ -7,7 +7,7 @@ export async function log(loglevel:LogLevel,message:string){
     let colorline=plainline;
     switch(loglevel){
         case "info":
-            console.log(chalk.red(plainline));
+            console.log(chalk.white(plainline));
             break;
         case"warn":
              console.log(chalk.yellow(plainline));

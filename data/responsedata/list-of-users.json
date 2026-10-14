@@ -1,0 +1,426 @@
+[
+    {
+        "id": "2",
+        "username": "sravya",
+        "email": "sravya@gmail.com",
+        "password": "Sravya@123",
+        "role": "user",
+        "status": "active"
+    },
+    {
+        "id": "3",
+        "username": "rahul",
+        "email": "rahul@gmail.com",
+        "password": "Rahul@123",
+        "role": "user",
+        "status": "inactive"
+    },
+    {
+        "id": "5",
+        "username": "kiran",
+        "email": "kiran@gmail.com",
+        "password": "kiran@123",
+        "role": "user1",
+        "status": "active"
+    },
+    {
+        "id": "1",
+        "name": "Venkatesh",
+        "email": "venku@email.com",
+        "isInstructor": "yes",
+        "courses": [
+            {
+                "courseId": "11",
+                "title": "courses1",
+                "duration": "onehour",
+                "rating": 5,
+                "studentsEnrolled": 100,
+                "topics": [
+                    "HTTP Methods",
+                    "Postman",
+                    "Playwright API",
+                    "Assertions"
+                ],
+                "price": {
+                    "currency": "rupees",
+                    "amount": 200,
+                    "discount": 80
+                }
+            },
+            {
+                "courseId": "22",
+                "title": "Advanced API Automation",
+                "duration": "two hours",
+                "rating": 4.7,
+                "studentsEnrolled": 250,
+                "topics": [
+                    "RestAssured",
+                    "Jackson Serialization",
+                    "API Schema Validation",
+                    "OAuth2"
+                ],
+                "price": {
+                    "currency": "INR",
+                    "amount": 399,
+                    "discount": 50
+                }
+            }
+        ],
+        "socialLinks": {
+            "linkedin": "linkdin.com",
+            "youtube": "youtube.com",
+            "website": "pojo.com"
+        },
+        "skills": [
+            "venku",
+            "mounika",
+            "charan"
+        ]
+    },
+    {
+        "id": "1",
+        "name": "Venkatesh",
+        "email": "venku@email.com",
+        "isInstructor": "yes",
+        "courses": [
+            {
+                "courseId": "11",
+                "title": "courses1",
+                "duration": "onehour",
+                "rating": 5,
+                "studentsEnrolled": 100,
+                "topics": [
+                    "HTTP Methods",
+                    "Postman",
+                    "Playwright API",
+                    "Assertions"
+                ],
+                "price": {
+                    "currency": "rupees",
+                    "amount": 200,
+                    "discount": 80
+                }
+            },
+            {
+                "courseId": "22",
+                "title": "Advanced API Automation",
+                "duration": "two hours",
+                "rating": 4.7,
+                "studentsEnrolled": 250,
+                "topics": [
+                    "RestAssured",
+                    "Jackson Serialization",
+                    "API Schema Validation",
+                    "OAuth2"
+                ],
+                "price": {
+                    "currency": "INR",
+                    "amount": 399,
+                    "discount": 50
+                }
+            }
+        ],
+        "socialLinks": {
+            "linkedin": "linkdin.com",
+            "youtube": "youtube.com",
+            "website": "pojo.com"
+        },
+        "skills": [
+            "venku",
+            "mounika",
+            "charan"
+        ]
+    },
+    {
+        "id": "1",
+        "name": "Venkatesh",
+        "email": "venku@email.com",
+        "isInstructor": "yes",
+        "courses": [
+            {
+                "courseId": "11",
+                "title": "courses1",
+                "duration": "onehour",
+                "rating": 5,
+                "studentsEnrolled": 100,
+                "topics": [
+                    "HTTP Methods",
+                    "Postman",
+                    "Playwright API",
+                    "Assertions"
+                ],
+                "price": {
+                    "currency": "rupees",
+                    "amount": 200,
+                    "discount": 80
+                }
+            },
+            {
+                "courseId": "22",
+                "title": "Advanced API Automation",
+                "duration": "two hours",
+                "rating": 4.7,
+                "studentsEnrolled": 250,
+                "topics": [
+                    "RestAssured",
+                    "Jackson Serialization",
+                    "API Schema Validation",
+                    "OAuth2"
+                ],
+                "price": {
+                    "currency": "INR",
+                    "amount": 399,
+                    "discount": 50
+                }
+            }
+        ],
+        "socialLinks": {
+            "linkedin": "linkdin.com",
+            "youtube": "youtube.com",
+            "website": "pojo.com"
+        },
+        "skills": [
+            "venku",
+            "mounika",
+            "charan"
+        ]
+    },
+    {
+        "id": "1",
+        "name": "Venkatesh",
+        "email": "venku@email.com",
+        "isInstructor": "yes",
+        "courses": [
+            {
+                "courseId": "11",
+                "title": "courses1",
+                "duration": "onehour",
+                "rating": 5,
+                "studentsEnrolled": 100,
+                "topics": [
+                    "HTTP Methods",
+                    "Postman",
+                    "Playwright API",
+                    "Assertions"
+                ],
+                "price": {
+                    "currency": "rupees",
+                    "amount": 200,
+                    "discount": 80
+                }
+            },
+            {
+                "courseId": "22",
+                "title": "Advanced API Automation",
+                "duration": "two hours",
+                "rating": 4.7,
+                "studentsEnrolled": 250,
+                "topics": [
+                    "RestAssured",
+                    "Jackson Serialization",
+                    "API Schema Validation",
+                    "OAuth2"
+                ],
+                "price": {
+                    "currency": "INR",
+                    "amount": 399,
+                    "discount": 50
+                }
+            }
+        ],
+        "skills": [
+            "venku",
+            "mounika",
+            "charan"
+        ],
+        "socialLinks": {
+            "linkedin": "linkdin.com",
+            "youtube": "youtube.com",
+            "website": "pojo.com"
+        }
+    },
+    {
+        "id": "67b1",
+        "username": "testuser",
+        "password": "test@123",
+        "languages": [
+            "Java",
+            "Python",
+            "HTML"
+        ],
+        "data": [
+            {
+                "name": "venkatesh",
+                "height": "5.7"
+            },
+            {
+                "name": "suran",
+                "height": "6"
+            }
+        ]
+    },
+    {
+        "id": "a8b9",
+        "username": "testuser",
+        "password": "test@123",
+        "languages": [
+            "Java",
+            "Python",
+            "HTML"
+        ],
+        "data": [
+            {
+                "name": "venkatesh",
+                "height": "5.7"
+            },
+            {
+                "name": "suran",
+                "height": "6"
+            }
+        ]
+    },
+    {
+        "id": "fffd",
+        "username": "testuser",
+        "password": "test@123",
+        "languages": [
+            "Java",
+            "Python",
+            "HTML"
+        ],
+        "data": [
+            {
+                "name": "venkatesh",
+                "height": "5.7"
+            },
+            {
+                "name": "suran",
+                "height": "6"
+            }
+        ]
+    },
+    {
+        "id": "4b05",
+        "username": "testuser",
+        "password": "test@123",
+        "languages": [
+            "Java",
+            "Python",
+            "HTML"
+        ],
+        "data": [
+            {
+                "name": "venkatesh",
+                "height": "5.7"
+            },
+            {
+                "name": "suran",
+                "height": "6"
+            }
+        ]
+    },
+    {
+        "id": "4e3b",
+        "username": "testuser",
+        "password": "test@123",
+        "languages": [
+            "Java",
+            "Python",
+            "HTML"
+        ],
+        "data": [
+            {
+                "name": "venkatesh",
+                "height": "5.7"
+            },
+            {
+                "name": "suran",
+                "height": "6"
+            }
+        ]
+    },
+    {
+        "id": "6ceb",
+        "username": "newuser",
+        "password": "newuser@123",
+        "languages": [
+            "Java",
+            "TypeScript",
+            "Playwright"
+        ],
+        "data": [
+            {
+                "name": "Ravi",
+                "height": "5.8"
+            },
+            {
+                "name": "Priya",
+                "height": "5.5"
+            }
+        ]
+    },
+    {
+        "id": "0eea",
+        "username": "newuser",
+        "password": "newuser@123",
+        "languages": [
+            "Java",
+            "TypeScript",
+            "Playwright"
+        ],
+        "data": [
+            {
+                "name": "Ravi",
+                "height": "5.8"
+            },
+            {
+                "name": "Priya",
+                "height": "5.5"
+            }
+        ]
+    },
+    {
+        "0": {
+            "username": "newuser",
+            "password": "newuser@123",
+            "languages": [
+                "Java",
+                "TypeScript",
+                "Playwright"
+            ],
+            "data": [
+                {
+                    "name": "Ravi",
+                    "height": "5.8"
+                },
+                {
+                    "name": "Priya",
+                    "height": "5.5"
+                }
+            ]
+        },
+        "id": "a26a"
+    },
+    {
+        "0": {
+            "username": "newuser",
+            "password": "newuser@123",
+            "languages": [
+                "Java",
+                "TypeScript",
+                "Playwright"
+            ],
+            "data": [
+                {
+                    "name": "Ravi",
+                    "height": "5.8"
+                },
+                {
+                    "name": "Priya",
+                    "height": "5.5"
+                }
+            ]
+        },
+        "id": "d688"
+    }
+]

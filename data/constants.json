@@ -3,5 +3,12 @@
     {
     "sucess":200,
     "crated":201
+  },
+  "API_Endpoints":
+  {
+    "get":"/users",
+    "post":"/users"
   }
+
+
 }

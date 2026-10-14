@@ -48,6 +48,8 @@ export const baseConfig= defineConfig({
     screenshot : 'only-on-failure',
     video : 'retain-on-failure',
     //actionTimeout:10_000,
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+
     
    
   },
@@ -59,7 +61,8 @@ export const baseConfig= defineConfig({
     use: {
       viewport: null,
       launchOptions: {
-        args: ['--start-maximized'],
+       // args: ['--start-maximized'],
+        args: ["--disable-blink-features=AutomationControlled", "--disable-features=IsolateOrigins,site-per-process", "--allow-no-sandbox-job"],
       },
     },
   },
