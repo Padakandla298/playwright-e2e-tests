@@ -1,0 +1,98 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e3]:
+    - link [ref=e5] [cursor=pointer]:
+      - /url: https://www.tutorialspoint.com
+    - heading "Selenium - Automation Practice Form" [level=1] [ref=e25]
+    - link "Selenium Tutorial" [ref=e27] [cursor=pointer]:
+      - /url: /selenium/index.htm
+  - main [ref=e28]:
+    - generic [ref=e30]:
+      - generic [ref=e32]:
+        - heading [level=2] [ref=e34]:
+          - button "Elements" [ref=e35] [cursor=pointer]
+        - generic [ref=e36]:
+          - heading [level=2] [ref=e37]:
+            - button "Forms" [ref=e38] [cursor=pointer]
+          - generic "Forms" [ref=e39]:
+            - list [ref=e41]:
+              - listitem [ref=e42]:
+                - link "Practice Form" [ref=e43] [cursor=pointer]:
+                  - /url: selenium_automation_practice.php
+              - listitem [ref=e44]:
+                - link "Login" [ref=e45] [cursor=pointer]:
+                  - /url: login.php
+              - listitem [ref=e46]:
+                - link "Register" [ref=e47] [cursor=pointer]:
+                  - /url: register.php
+        - heading [level=2] [ref=e49]:
+          - button "Alerts, Frames & Windows" [ref=e50] [cursor=pointer]
+        - heading [level=2] [ref=e52]:
+          - button "Widgets" [ref=e53] [cursor=pointer]
+        - heading [level=2] [ref=e57]:
+          - button "Interaction" [ref=e58] [cursor=pointer]
+      - generic [ref=e60]:
+        - heading "Student Registration Form" [level=1] [ref=e61]
+        - generic [ref=e62]:
+          - generic [ref=e63]: "Name:"
+          - textbox "Name:" [ref=e65]:
+            - /placeholder: First Name
+        - generic [ref=e66]:
+          - generic [ref=e67]: "Email:"
+          - textbox "Email:" [ref=e69]:
+            - /placeholder: name@example.com
+        - generic [ref=e70]:
+          - generic [ref=e71]: "Gender:"
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - radio "Gender:" [ref=e75]
+              - generic [ref=e76]: Male
+            - generic [ref=e77]:
+              - radio [ref=e78]
+              - generic [ref=e79]: Female
+            - generic [ref=e80]:
+              - radio [ref=e81]
+              - generic [ref=e82]: Other
+        - generic [ref=e83]:
+          - generic [ref=e84]: "Mobile(10 Digits):"
+          - textbox "Mobile(10 Digits):" [ref=e86]:
+            - /placeholder: Enter Mobile Number
+        - generic [ref=e87]:
+          - generic [ref=e88]: "Date of Birth:"
+          - textbox "Date of Birth:" [ref=e90]
+        - generic [ref=e91]:
+          - generic [ref=e92]: "Subjects:"
+          - textbox "Subjects:" [ref=e94]:
+            - /placeholder: Enter Subject
+        - generic [ref=e95]:
+          - generic [ref=e96]: "Hobbies:"
+          - generic [ref=e98]:
+            - generic [ref=e99]:
+              - checkbox "Hobbies:" [ref=e100]
+              - generic [ref=e101]: Sports
+            - generic [ref=e102]:
+              - checkbox [ref=e103]
+              - generic [ref=e104]: Reading
+            - generic [ref=e105]:
+              - checkbox [ref=e106]
+              - generic [ref=e107]: Music
+        - generic [ref=e108]:
+          - generic [ref=e109]: "Picture:"
+          - 'button "Picture: State and City" [ref=e112]'
+        - generic [ref=e113]:
+          - generic [ref=e114]: "Current Address:"
+          - textbox "Currend Address" [ref=e116]
+        - generic [ref=e117]:
+          - generic [ref=e118]: State and City
+          - generic [ref=e119]:
+            - combobox [ref=e121]:
+              - option "Choose State" [selected]
+              - option "NCR"
+              - option "Uttar Pradesh"
+              - option "Haryana"
+              - option "Rajasthan"
+            - combobox [ref=e123]:
+              - option "Choose City" [selected]
+              - option "Agra"
+              - option "Lucknow"
+              - option "Meerut"
+        - button "Login" [ref=e125] [cursor=pointer]
